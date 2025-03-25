@@ -1,3 +1,14 @@
+from flask import Flask, jsonify
+
+# Erst Flask-App erzeugen
+app = Flask(__name__)
+
+# Root-Endpunkt
+@app.route('/')
+def home():
+    return "✅ Flask läuft auf Render!"
+
+# Beispiel-GET-Endpunkt
 @app.route('/appointments', methods=['GET'])
 def get_appointments():
     return jsonify([
