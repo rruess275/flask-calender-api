@@ -55,5 +55,11 @@ def create_appointment():
 
     return jsonify({"message": "Termin erfolgreich erstellt", "Id": new_id}), 201
 
+
+@app.route('/')
+def index():
+    return "Flask-API läuft erfolgreich auf Render!"
+
+
 if __name__ == '__main__':
     app.run()
