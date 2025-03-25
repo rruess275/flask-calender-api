@@ -1,11 +1,3 @@
-from flask import Flask, jsonify
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "✅ Flask läuft auf Render!"
-
 @app.route('/appointments', methods=['GET'])
 def get_appointments():
     return jsonify([
